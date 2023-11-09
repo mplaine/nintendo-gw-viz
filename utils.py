@@ -266,9 +266,9 @@ def visualize_outliers(df: pd.DataFrame, column_name: str) -> None:
     plt.show()
 
 
-def visualize_series_produced(df: pd.DataFrame, max_release_year: Union[None, int] = None, save_figure: bool = True) -> None:
+def visualize_series_released(df: pd.DataFrame, max_release_year: Union[None, int] = None, save_figure: bool = True) -> None:
     """
-    Creates a bar plot visualization showing the number of games produced for each series.
+    Creates a bar plot visualization showing the number of games released for each series.
 
     Args:
         df (pd.DataFrame): The DataFrame containing the series data.
@@ -298,12 +298,12 @@ def visualize_series_produced(df: pd.DataFrame, max_release_year: Union[None, in
     plt.ylabel("Quantity", labelpad=10)
 
     # Add title
-    plt.title("Number of Nintendo Game & Watch Games Produced per Series", pad=20, fontsize=14, loc="left")
+    plt.title("Number of Nintendo Game & Watch Games Released per Series", pad=20, fontsize=14, loc="left")
 
     # Save figure
     if save_figure:
-        series_produced_filepath = pathlib.Path("figures/nintendo_game_and_watch_series_produced.png")
-        plt.savefig(series_produced_filepath, bbox_inches="tight", pad_inches=0.5, dpi=72)
+        series_released_filepath = pathlib.Path("figures/nintendo_game_and_watch_series_released.png")
+        plt.savefig(series_released_filepath, bbox_inches="tight", pad_inches=0.5, dpi=72)
 
     # Show figure
     plt.show()
