@@ -81,7 +81,7 @@ def generate_timeline_levels(series: pd.Series) -> list[int]:
         elif c < 0:
             levels.append(negative_level)
             if negative_level == -threshold_level:
-                negative_level = -3
+                negative_level = -2
             else:
                 negative_level += c
 
@@ -344,13 +344,14 @@ def visualize_timeline(
     max_year = plotting_df["date of release"].max().year
     min_date = dt.date(min_year, 1, 1)
     max_date = dt.date(max_year + 1, 1, 1)
+    ylim = max(abs(plotting_df["level"].min()), abs(plotting_df["level"].max()))
     ax.set_xticks(
         ticks=pd.date_range(min_date, max_date, freq="ys"),
         labels=range(min_year, max_year + 2),
         rotation="horizontal",
         ha="center",
     )
-    ax.set_ylim(plotting_df["level"].min(), plotting_df["level"].max())
+    ax.set_ylim(-ylim, ylim)
     ax.spines[["top", "right", "left"]].set_visible(False)
     ax.spines[["bottom"]].set_position(("axes", 0.5))
     ax.spines[["bottom"]].set_color("black")

@@ -23,6 +23,7 @@ repos:
         args: [--pytest-test-first]
         exclude: ^tests/(db/session.py|dependencies.py)
       - id: pretty-format-json
+        exclude: \.ipynb$
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/asottile/pyupgrade

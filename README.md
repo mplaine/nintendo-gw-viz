@@ -14,6 +14,7 @@ The main files and folders of this project are:
 ├── data                   : Datasets
 ├── figures                : Generated visualizations
 ├── nintendo_gw_viz.ipynb  : Jupyter notebook file
+├── nintendo_gw_viz.pdf    : Jupyter notebook file (PDF)
 └── utils.py               : Utility functions
 ```
 
