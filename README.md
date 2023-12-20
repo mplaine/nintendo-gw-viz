@@ -53,7 +53,7 @@ pip install -r requirements-dev.txt
 
 ## Usage
 
-Open the Jupyter noteobook:
+Open the Jupyter notebook:
 
 ```bash
 jupyter notebook nintendo_gw_viz.ipynb
